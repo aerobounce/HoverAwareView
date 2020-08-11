@@ -1,5 +1,6 @@
 
 <h1 align="center">HoverAwareView</h1>
+<h3 align="center">Memory leak free replacement for <code>onHover</code> modifier</h3>
 
 <p align="center">
     <img src="https://img.shields.io/badge/macOS-10.15+-brightgreen.svg" />
@@ -13,7 +14,7 @@ This repository introduces SwiftUI's onHover modifier substitute View which is a
 
 ## Why do you need this?
 
-- As of **Swift 5.2** and **Xcode 11.6 / 12.0 beta 4**, in certain circumstances, just attatching a `onHover` modifier **triggers memory leak** — preventing `ObservedObject` in a view to be deallocated. It seems like a bug.
+- As of **Swift 5.2** and **Xcode 11.6 / 12.0 beta 4** targeting **macOS 10.15.6**, in certain circumstances, just attatching a `onHover` modifier **triggers memory leak** — preventing `ObservedObject` in a view to be deallocated. It seems like a bug.
 - The issue is disscussed here:
     - https://forums.swift.org/t/leaks-using-onhover-modifier/31671
 
