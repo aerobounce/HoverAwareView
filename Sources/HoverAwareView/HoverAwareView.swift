@@ -30,7 +30,7 @@ import SwiftUI
 
 public extension View {
     func onHoverAware(_ perform: @escaping (Bool) -> Void) -> some View {
-        overlay(HoverAwareView { (value: Bool) in
+        background(HoverAwareView { (value: Bool) in
             perform(value)
         })
     }
