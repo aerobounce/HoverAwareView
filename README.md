@@ -42,6 +42,23 @@ struct ContentView: View {
 }
 ```
 
+Or use `View` extension:
+
+```swift
+struct ContentView: View {
+
+    @State private var opacity: Double = 1.0
+
+    var body: some View {
+        Color.black.opacity(opacity).onHoverAware { (hovering: Bool) in
+            withAnimation(Animation.spring()) {
+                self.opacity = hovering ? 0.5 : 1.0
+            }
+        }
+    }
+}
+```
+
 ## License
 
 ```

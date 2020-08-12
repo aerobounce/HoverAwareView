@@ -28,6 +28,14 @@ import SwiftUI
 
 #if os(macOS)
 
+public extension View {
+    func onHoverAware(_ perform: @escaping (Bool) -> Void) -> some View {
+        overlay(HoverAwareView { (value: Bool) in
+            perform(value)
+        })
+    }
+}
+
 public struct HoverAwareView: View {
     public let onHover: (Bool) -> Void
 
