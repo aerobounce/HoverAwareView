@@ -38,7 +38,7 @@ public struct HoverAwareView: View {
 
 private extension HoverAwareView {
     final class Representable: NSViewRepresentable {
-        var onHover: (Bool) -> Void
+        let onHover: (Bool) -> Void
 
         init(onHover: @escaping (Bool) -> Void) {
             self.onHover = onHover
@@ -54,7 +54,7 @@ private extension HoverAwareView {
 
 private extension HoverAwareView {
     final class NSHoverAwareView: NSView {
-        var onHover: (Bool) -> Void
+        let onHover: (Bool) -> Void
 
         init(onHover: @escaping (Bool) -> Void) {
             self.onHover = onHover
